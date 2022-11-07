@@ -8,7 +8,7 @@ https://github.com/toluwase1/notification
 ### Run docker compose up for each
 
 ### User service
-#### example payload for the user service signup:
+#### example payload for the user service signup: http://localhost:8081/api/v1/auth/signup
 {
 "name":"toluwase",
 "email":"tolu@gmail.com.com",
@@ -16,14 +16,14 @@ https://github.com/toluwase1/notification
 "password":"toluwase"
 }
 
-#### example payload for the user service login:
+#### example payload for the user service login: http://localhost:8081/api/v1/auth/login
 {
 "email":"tolu@gmail.com.com",
 "password":"toluwase"
 }
 
 ### Company service
-#### example payload for create company service:
+#### example payload for create company service: http://localhost:8080/api/v1/company/
 {
 "id":"1",
 "support_email" : "any@gmail.com",
@@ -34,7 +34,7 @@ https://github.com/toluwase1/notification
 "type" : "NonProfit"
 }
 
-#### example payload for update company service:
+#### example payload for update company service: http://localhost:8080/api/v1/company
 {
 "support_email" : "any@gmail.com",
 "name" : "new company",
