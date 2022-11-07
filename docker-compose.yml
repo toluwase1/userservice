@@ -1,0 +1,25 @@
+version: "3.9"  # optional since v1.27.0
+
+services:
+  user-api:
+    build: .
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+    depends_on:
+      - db2
+
+  db2:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - APP_DB_USER=docker
+      - APP_DB_PASS=docker
+      - APP_DB_NAME=user_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
